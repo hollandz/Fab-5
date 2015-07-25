@@ -1,0 +1,185 @@
+﻿body {
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+    font-weight: 200;
+    font-size: 20px;
+    background-color: black;
+}
+
+#links, #blueimp-gallery-carousel, .parallax-content{
+    background-color: black;
+}
+
+.parallax-background {
+    /*background-image: url("../content/img/fab5logo.png");*/
+    background-color: #000000;
+    height: 620px;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    width: 100% !important;
+}
+
+.intro-text {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    /*margin-top: 15%;*/
+}
+
+.parallax-content {
+    max-width: 100%;
+    position: relative;
+    top: 600px;
+    /*padding: 50px;*/
+    font-size: 20px;
+   
+}
+
+#backLogo {
+    height: 600px;
+}
+
+#titleText {
+    margin-top: 15%;
+    font-family: 'Times New Roman', Times, serif;
+    color: #a01522;
+    font-style:italic;
+}
+
+.footer {
+    position: relative;
+    max-width: 100%;
+    top: 600px;
+    background-color: #000000;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 4rem;
+}
+
+    .footer p.slogan {
+        color: #8d9093;
+        font-size: 1.8rem;
+        margin: 0 0 1rem;
+    }
+
+    .footer p.copywrite {
+        color: #8f9296;
+        font-size: 0.875rem;
+        margin: 0;
+    }
+
+    .footer .links a {
+        list-style: none;
+        font-weight: bold;
+        color: #ffffff;
+        /*padding: 3rem 0 2rem;*/
+        margin: 0;
+    }
+
+        .footer .links a::after {
+            content: "•";
+            padding: 0 0.4rem 0 0.8rem;
+        }
+
+        .footer .links a:last-child::after {
+            content: "";
+            padding: 0 0.4rem 0 0.8rem;
+        }
+
+i {
+    font-size: 2.5rem;
+}
+
+.icon-button {
+    border-radius: 3.6rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    margin: 0 5px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+    background: white;
+}
+
+    .icon-button span {
+        display: block;
+        border-radius: 0;
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transition: all 0.3s;
+    }
+
+    .icon-button:hover span {
+        display: block;
+        border-radius: 3.6rem;
+        width: 3.6rem;
+        height: 3.6rem;
+        margin: -1.8rem;
+    }
+
+    .icon-button i {
+        background: none;
+        height: 3.6rem;
+        width: 3.6rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        line-height: 3.6rem;
+        transition: all 0.3s;
+    }
+
+.twitter span {
+    background-color: #4099ff;
+}
+
+.facebook span {
+    background-color: #3B5998;
+}
+
+.gplus span {
+    background-color: #db5a3c;
+}
+
+.icon-button .fi-social-twitter {
+    color: #4099ff;
+}
+
+.icon-button .fi-social-facebook {
+    color: #3b5998;
+}
+
+.icon-button .fi-social-google-plus  {
+    color: #db5a3c;
+}
+
+.icon-button .fi-social-instagram  {
+    color: #db5a3c;
+}
+
+.icon-button:hover .fi-social-twitter, .icon-button:hover .fi-social-facebook, .icon-button:hover .fi-social-google-plus, .icon-button:hover .fi-social-instagram{
+    color: white;
+    font-size: 2.6rem;
+    line-height: 3.9rem;
+}
+
+.orbit-container{
+  background: none;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+
+}
+
+.textarea-custom{
+    height: 125px;
+    resize: none;
+}
