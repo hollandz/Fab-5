@@ -8,26 +8,24 @@
     <link rel="stylesheet" href="css/styles.css" />+
     <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
     <link rel="stylesheet" href="content/foundation-icons/foundation-icons.css" />
+    <script src="js/vendor/modernizr.js"></script>
+
 
 </head>
 <body ng-app="fab">
 
     <div class="parallax-background">
         <div class="intro-text">
-             <div class="row">
+            <div class="row">
                 <div class="small-12 columns">
                     <img id="backLogo" src="/img/fab5logo.png">
                 </div>
-                <!--<div class="small-4 columns" id="titleText">
-                    <span>Good memories are our responsibilty.</span>
-
-                </div>-->
             </div>
         </div>
     </div>
-    <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
-    <div class="parallax-content">
 
+    <div class="parallax-content">
+        <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
         <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
             <div class="slides"></div>
             <h3 class="title"></h3>
@@ -141,11 +139,10 @@
     </div>
 
 
-    </div>
     <footer class="footer">
         <div class="row collapse">
-            <div class="small-6 columns">
-                <p class="slogan smaller">Contact Us</p>
+            <div class="small-12 columns">
+                <!--<p class="slogan smaller">Contact Us</p>-->
                 <p class="links">
                     <a target="_blank" href="//twitter.com/fab5gbe" class="icon-button twitter">
                         <i class="fi-social-twitter"></i><span></span>
@@ -157,49 +154,52 @@
                         <i class="fi-social-instagram"></i><span></span>
                     </a>
                 </p>
-                <button type="button" class="button tiny round">Events</button>
-                <button type="button" class="button tiny round">About</button>
-            </div>
-            <div class="columns small-6">
-                <div class="small-12 columns" ng-controller="ContactController">
-                    <div class="error" ng-show="error">
-                        <button class="close" data-dismiss="alert">x</button>
-                        <strong>Error!</strong> An error occured while trying to send message.
-                    </div>
-                    <div class="success" ng-show="success">
-                        <button class="close" data-dismiss="alert">x</button>
-                        <strong>Success! </strong> Your message was successfully sent.
-                    </div>
-                    <form role="form" name="contactForm">
-                        <div class="form-group" ng-class="{error: contactForm.name.$invalid}">
-                            <label>Full Name</label>
-                            <input class="radius tiny" type="text" name="name" ng-model="user.name" required="required" placeholder="Your name">
-                            <!--<span class="help-block" ng-show="contactForm.name.$error.required">Required</span>-->
-                        </div>
-                        <div class="form-group" ng-class="{error: contactForm.email.$invalid}">
-                            <label>Email</label>
-                            <input class="radius tiny" type="email" name="email" ng-model="user.email" required="required" placeholder="Your email address">
-                            <!--<span class="help-block" ng-show="contactForm.email.$error.required">Required</span>-->
-                            <span class="help-block" ng-show="contactForm.email.$error.email">Invalid email address</span>
-                        </div>
-                        <div class="form-group" ng-class="{error: contactForm.message.$invalid}">
-                            <label>Message</label>
-                            <textarea class="radius textarea-custom dark" rows="5" name="message" ng-model="user.body" required="required" placeholder="Your messsage"></textarea>
-                            <!--<span class="help-inline" ng-show="contactForm.message.$error.required">Required</span>-->
-                        </div>
-                        <button class="btn btn-primary btn-lg btn-block" ng-click="send()" ng-disabled="contactForm.$invalid">Send</button>
-                    </form>
-                </div>
+                <!--<button type="button" class="button tiny round">Events</button>-->
+                <!--<button type="button" class="button tiny round">About</button>-->
             </div>
 
-            <p class="copywrite">Copywrite © 2015 ZH</p>
+
         </div>
+        <div class="row collapse">
+            <div class="small-6 small-centered columns" ng-controller="ContactController">
+
+                <hr />
+
+                <div data-alert class="alert-box success radius" ng-show="success">
+                    Your email was sent successfully.
+                    <a href="#" class="close">&times;</a>
+                </div>
+                <div data-alert class="alert-box error radius" ng-show="error">
+                    There was a problem sending your email.
+                    <a href="#" class="close">&times;</a>
+                </div>
+                <form role="form" name="contactForm">
+                    <div>
+                        <input class="radius tiny" type="text" name="name" ng-model="user.name" required="required" placeholder="Your name">
+                        <span class="error" ng-show="contactForm.name.$error.required && !contactForm.name.$pristine">Invalid Entry</span>
+                    </div>
+                    <div>
+                        <input class="radius tiny" type="email" name="email" ng-model="user.email" required="required" placeholder="Your email address">
+                        <span class="error" ng-show="contactForm.email.$error.email && !contactForm.name.$pristine">Invalid email address</span>
+                    </div>
+                    <div>
+                        <textarea class="radius textarea-custom dark" rows="5" name="message" ng-model="user.body" required="required" placeholder="Your messsage"></textarea>
+                        <small class="error" ng-show="contactForm.message.$error.email && !contactForm.message.$pristine">Invalid entry</small>
+                    </div>
+                    <div>
+                        <button class="button button-wide round" ng-click="send()" ng-disabled="contactForm.$invalid" ng-class="{disabled: contactForm.$invalid}">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <p class="copywrite">Copywrite © 2015 ZH</p>
     </footer>
 
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/foundation.min.js"></script>
     <script src="js/blueimp-gallery.min.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/foundation/foundation.alert.js"></script>
     <script src="js/main.js"></script>
 
 </body>
