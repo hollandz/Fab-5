@@ -2,18 +2,41 @@
 
 $(document).foundation();
 
-var parent = $("#links");
-var links = parent.children();
-while (links.length) {
-    parent.append(links.splice(Math.floor(Math.random() * links.length), 1)[0]);
+var links = [];
+var pad = '00';
+var str = "";
+var ans; 
+for (var i = 1; i < 100; i++){
+    str = "" + i;
+    ans = pad.substring(0, pad.length - str.length) + str;
+    links.push("//fab5.blob.core.windows.net/images/Standing%20Ovation/" + ans + ".jpg");
 }
 
-blueimp.Gallery(document.getElementById('links').getElementsByTagName('a'),
+blueimp.Gallery(shuffle(links),
 {
     container: '#blueimp-gallery-carousel',
     carousel: true
 }
 );
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex ;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
 
 angular.module('fab', []);
 angular.module('fab')
