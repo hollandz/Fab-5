@@ -54,8 +54,11 @@
 
 <div class="parallax-content">
 
-    <div ng-view autoscroll="true"></div>
-
+            <div ng-view autoscroll="true">
+                
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -127,12 +130,12 @@
 //document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 
 $(function() {
-   $("li").click(function() {
+ $("li").click(function() {
       // remove classes from all
       $("li").removeClass("active");
       // add class to the one we clicked
       $(this).addClass("active");
-   });
+  });
 });
 
 

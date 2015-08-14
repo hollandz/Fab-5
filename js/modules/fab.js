@@ -47,23 +47,19 @@ angular.module('fab')
 angular.module('fab').controller('layoutController', ['$scope', '$document', function($scope, $document){
 
     $scope.scrollToBottom = function (){
-         var someElement = angular.element(document.getElementById('contact'));
-        $document.scrollToElementAnimated(someElement);
-    }
+       var someElement = angular.element(document.getElementById('contact'));
+       $document.scrollToElementAnimated(someElement);
+   }
 
 }]);
 
 
 angular.module('fab').controller('homeController', ['$scope', '$rootScope', function($scope, $rootScope){
-
     $rootScope.bgURL = 'img/fab5logo.png';
-
 }]);
 
 angular.module('fab').controller('hcController', ['$scope', '$rootScope',  function($scope, $rootScope){
-
     $rootScope.bgURL = 'img/hcLogoAlt.png';
-
 
 }]);
 
