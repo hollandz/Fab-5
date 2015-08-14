@@ -35,7 +35,7 @@
     top: 600px;
     /*padding: 50px;*/
     font-size: 20px;
-   
+    
 }
 
 #backLogo {
@@ -190,6 +190,6 @@ i {
 }
 
 li.active a {
-background: #943543 !important;
+    background: #943543 !important;
 
 }
