@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Fab 5</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/img/fab5logo.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/fab5logo.png" />
     <link rel="stylesheet" href="css/foundation.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/styles.css" />+
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
     <link rel="stylesheet" href="content/foundation-icons/foundation-icons.css" />
     <script src="js/vendor/modernizr.js"></script>
@@ -13,194 +13,135 @@
 
 </head>
 <body ng-app="fab">
+    <div class="fixed contain-to-grid">
+        <nav class="top-bar" data-topbar role="navigation" data-options="is_hover: true" data-options="dropdown_autoclose: false">
+          <ul class="title-area">
+            <li class="name">
+            </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
 
-    <div class="parallax-background">
-        <div class="intro-text">
-            <div class="row">
-                <div class="small-12 columns">
-                    <img id="backLogo" src="/img/fab5logo.png">
-                </div>
-            </div>
-        </div>
-    </div>
+        <section class="top-bar-section" ng-controller="layoutController">
+            <!-- Right Nav Section -->
+            <ul class="right">
+              <li class="active"><a href="#/" >Home </a></li>
+              <li class="has-dropdown">
+                <a target="_self" href="#/events">Events</a>
+                <ul class="dropdown">
+                  <li><a href="#/events/hc">Homecoming 2015</a></li>
+              </ul>
+          </li>
 
-    <div class="parallax-content">
-        <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
-        <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
-            <div class="slides"></div>
-            <h3 class="title"></h3>
-            <a class="prev">‹</a>
-            <a class="next">›</a>
-            <a class="play-pause"></a>
-            <ol class="indicator"></ol>
-        </div>
+          <li><a href="#/about">About</a></li>
+          <li ng-click="scrollToBottom()"><a target="_self" href="#">Contact</a></li>
 
-        <div id="links" style="display: none">
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/01.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/02.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/03.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/04.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/05.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/06.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/07.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/08.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/09.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/10.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/11.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/12.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/13.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/14.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/15.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/16.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/17.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/18.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/19.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/20.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/21.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/22.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/23.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/24.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/25.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/26.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/27.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/28.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/29.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/30.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/31.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/32.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/33.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/34.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/35.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/36.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/37.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/38.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/39.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/40.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/41.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/42.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/43.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/44.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/45.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/46.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/47.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/48.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/49.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/50.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/51.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/52.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/53.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/54.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/55.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/56.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/57.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/58.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/59.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/60.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/61.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/62.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/63.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/64.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/65.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/66.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/67.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/68.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/69.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/70.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/71.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/72.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/73.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/74.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/75.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/76.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/77.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/78.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/79.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/80.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/81.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/82.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/83.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/84.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/85.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/86.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/87.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/88.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/89.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/90.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/91.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/92.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/93.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/94.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/95.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/96.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/97.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/98.jpg" title="Fab 5"></a>
-            <a href="//fab5.blob.core.windows.net/images/Standing%20Ovation/99.jpg" title="Fab 5"></a>
-        </div>
-    </div>
+      </ul>
 
+  </section>
+</nav>
+</div>
 
-    <footer class="footer">
-        <div class="row collapse">
+<div class="parallax-background" ng-controller="homeController">
+    <div class="intro-text">
+        <div class="row">
             <div class="small-12 columns">
-                <!--<p class="slogan smaller">Contact Us</p>-->
-                <p class="links">
-                    <a target="_blank" href="//twitter.com/fab5gbe" class="icon-button twitter">
-                        <i class="fi-social-twitter"></i><span></span>
-                    </a>
-                    <a target="_blank" href="//www.facebook.com/pages/Fab5/848160428599252" class="icon-button facebook">
-                        <i class="fi-social-facebook"></i><span></span>
-                    </a>
-                    <a target="_blank" href="//instagram.com/fab5gbe/" class="icon-button gplus">
-                        <i class="fi-social-instagram"></i><span></span>
-                    </a>
-                </p>
-                <!--<button type="button" class="button tiny round">Events</button>-->
-                <!--<button type="button" class="button tiny round">About</button>-->
-            </div>
-
-
-        </div>
-        <div class="row collapse">
-            <div class="small-6 small-centered columns" ng-controller="ContactController">
-
-                <hr />
-
-                <div data-alert class="alert-box success radius" ng-show="success">
-                    Your email was sent successfully.
-                    <a href="#" class="close">&times;</a>
-                </div>
-                <div data-alert class="alert-box error radius" ng-show="error">
-                    There was a problem sending your email.
-                    <a href="#" class="close">&times;</a>
-                </div>
-                <form role="form" name="contactForm">
-                    <div>
-                        <input class="radius tiny" type="text" name="name" ng-model="user.name" required="required" placeholder="Your name">
-                        <span class="error" ng-show="contactForm.name.$error.required && !contactForm.name.$pristine">Invalid Entry</span>
-                    </div>
-                    <div>
-                        <input class="radius tiny" type="email" name="email" ng-model="user.email" required="required" placeholder="Your email address">
-                        <span class="error" ng-show="contactForm.email.$error.email && !contactForm.name.$pristine">Invalid email address</span>
-                    </div>
-                    <div>
-                        <textarea class="radius textarea-custom dark" rows="5" name="message" ng-model="user.body" required="required" placeholder="Your messsage"></textarea>
-                        <small class="error" ng-show="contactForm.message.$error.email && !contactForm.message.$pristine">Invalid entry</small>
-                    </div>
-                    <div>
-                        <button class="button button-wide round" ng-click="send()" ng-disabled="contactForm.$invalid" ng-class="{disabled: contactForm.$invalid}">Send</button>
-                    </div>
-                </form>
+                <img id="backLogo" ng-src="{{bgURL}}">
             </div>
         </div>
-        <p class="copywrite">Copywrite © 2015 ZH</p>
-    </footer>
+    </div>
+</div>
 
-    <script src="js/blueimp-gallery.min.js"></script>
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/foundation/foundation.alert.js"></script>
-    <script src="js/main.js"></script>
+<div class="parallax-content">
+
+    <div ng-view></div>
+
+</div>
+
+
+<footer class="footer" id="contact">
+
+    <div class="row collapse">
+        <div class="small-6 small-centered columns" ng-controller="ContactController">
+
+            <hr />
+
+            <div data-alert class="alert-box success radius" ng-show="success">
+                Your email was sent successfully.
+                <a href="#" class="close">&times;</a>
+            </div>
+            <div data-alert class="alert-box error radius" ng-show="error">
+                There was a problem sending your email.
+                <a href="#" class="close">&times;</a>
+            </div>
+            <form role="form" name="contactForm">
+                <div>
+                    <input class="radius tiny" type="text" name="name" ng-model="user.name" required="required" placeholder="Your name">
+                    <span class="error" ng-show="contactForm.name.$error.required && !contactForm.name.$pristine">Invalid Entry</span>
+                </div>
+                <div>
+                    <input class="radius tiny" type="email" name="email" ng-model="user.email" required="required" placeholder="Your email address">
+                    <span class="error" ng-show="contactForm.email.$error.email && !contactForm.name.$pristine">Invalid email address</span>
+                </div>
+                <div>
+                    <textarea class="radius textarea-custom dark" rows="5" name="message" ng-model="user.body" required="required" placeholder="Your messsage"></textarea>
+                    <small class="error" ng-show="contactForm.message.$error.email && !contactForm.message.$pristine">Invalid entry</small>
+                </div>
+                <div>
+                    <button class="button button-wide" ng-click="send()" ng-disabled="contactForm.$invalid" ng-class="{disabled: contactForm.$invalid}">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row collapse">
+        <div class="small-12 columns">
+            <!--<p class="slogan smaller">Contact Us</p>-->
+            <p class="links">
+                <a target="_blank" href="//twitter.com/fab5gbe" class="icon-button twitter">
+                    <i class="fi-social-twitter"></i><span></span>
+                </a>
+                <a target="_blank" href="//www.facebook.com/pages/Fab5/848160428599252" class="icon-button facebook">
+                    <i class="fi-social-facebook"></i><span></span>
+                </a>
+                <a target="_blank" href="//instagram.com/fab5gbe/" class="icon-button gplus">
+                    <i class="fi-social-instagram"></i><span></span>
+                </a>
+            </p>
+        </div>
+    </div>
+    <p class="copywrite">Copywrite © 2015 ZH</p>
+</footer>
+
+<script src="js/blueimp-gallery.min.js"></script>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
+<script src="js/foundation.min.js"></script>
+<script src="js/foundation/foundation.alert.js"></script>
+<script src="js/foundation/foundation.topbar.js"></script>
+<script src="js/modules/fab.js"></script>
+
+<script>
+
+document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+
+$("nav").click(function(){
+    $("nav li").removeClass("active"); //toggles 'active' class for all <dd> elements
+});
+
+$("nav a").click(function(){
+    this.addClass("active");
+});
+
+
+
+$(document).ready(function(){
+
+    $(document).foundation( );
+
+});
+
+</script>
 
 </body>
 </html>
