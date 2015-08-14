@@ -1,4 +1,4 @@
-angular.module('fab', ['ngRoute']);
+angular.module('fab', ['ngRoute', 'duScroll']);
 angular.module('fab')
 .controller('ContactController', ['$scope',function ($scope) {
     $scope.success = false;
@@ -44,11 +44,11 @@ angular.module('fab')
 
         }// end scope.send
     }]);//end conroller definition
-angular.module('fab').controller('layoutController', ['$scope','$location' ,'$anchorScroll', function($scope, $location, $anchorScroll){
+angular.module('fab').controller('layoutController', ['$scope', '$document', function($scope, $document){
 
     $scope.scrollToBottom = function (){
-        $location.hash('contact');
-        $anchorScroll();
+         var someElement = angular.element(document.getElementById('contact'));
+        $document.scrollToElementAnimated(someElement);
     }
 
 }]);
