@@ -1,4 +1,4 @@
-angular.module('fab', ['ngRoute', 'duScroll']);
+angular.module('fab', ['ngRoute', 'duScroll', 'ngAnimate']);
 angular.module('fab')
 .controller('ContactController', ['$scope',function ($scope) {
     $scope.success = false;
