@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
     <link rel="stylesheet" href="content/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="css/animate.css" />
     <script src="js/vendor/modernizr.js"></script>
-
-
 </head>
 <body ng-app="fab">
     <div class="fixed contain-to-grid">
@@ -45,24 +44,22 @@
 <div class="parallax-background" ng-controller="homeController">
     <div class="intro-text">
         <div class="row">
-            <div class="small-12 columns">
-                <img id="backLogo" ng-src="{{bgURL}}">
+            <div class="small-12 columns animated ">
+                <img id="backLogo" ng-src="{{bgURL}}" fade-in>
             </div>
         </div>
     </div>
 </div>
 
 <div class="parallax-content">
-
-            <div ng-view autoscroll="true">
-                
+            <div ng-view autoscroll="true" class="animated fadeIn">
             </div>
         </div>
     </div>
 </div>
 
 
-<footer class="footer" id="contact">
+<footer class="footer" id="contact" style="display:none;">
 
     <div class="row collapse">
         <div class="small-6 small-centered columns" ng-controller="ContactController">
@@ -142,6 +139,7 @@ $(function() {
 
 $(document).ready(function(){
 
+    $('.footer').fadeIn();
     $(document).foundation( );
 
 });

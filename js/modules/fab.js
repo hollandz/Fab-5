@@ -1,4 +1,4 @@
-angular.module('fab', ['ngRoute', 'duScroll', 'ngAnimate']);
+angular.module('fab', ['ngRoute', 'duScroll']);
 angular.module('fab')
 .controller('ContactController', ['$scope',function ($scope) {
     $scope.success = false;
@@ -53,6 +53,22 @@ angular.module('fab').controller('layoutController', ['$scope', '$document', fun
 
 }]);
 
+angular.module('fab').directive('fadeIn', function($timeout){
+    return {
+        restrict: 'A',
+        link: function($scope, $element, attrs){
+            //$element.addClass("animated fadeInDownBig");
+            $element.on('load', function() {
+
+                $element.removeClass().addClass('animated fadeIn')
+                .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                   $element.removeClass();
+    });
+
+            });
+        }
+    }
+})
 
 angular.module('fab').controller('homeController', ['$scope', '$rootScope', function($scope, $rootScope){
     $rootScope.bgURL = 'img/fab5logo.png';
