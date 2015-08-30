@@ -3,6 +3,7 @@
 <head>
     <title>Fab 5</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/fab5logo.png" />
+    <link rel="stylesheet" href="css/west.css" />
     <link rel="stylesheet" href="css/foundation.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -12,35 +13,21 @@
     <script src="js/vendor/modernizr.js"></script>
 </head>
 <body ng-app="fab">
-    <div class="fixed contain-to-grid">
-        <nav class="top-bar" data-topbar role="navigation" data-options="is_hover: true" data-options="dropdown_autoclose: false">
-          <ul class="title-area">
-            <li class="name">
-            </li>
-            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-        </ul>
 
-        <section class="top-bar-section" ng-controller="layoutController">
-            <!-- Right Nav Section -->
-            <ul class="right">
-              <li class="active"><a href="#/" >Home </a></li>
-              <li class="has-dropdown">
-                <a target="_self" href="#/events">Events</a>
-                <ul class="dropdown">
-                  <li><a href="#/events/hc">Homecoming 2015</a></li>
-              </ul>
-          </li>
-
-          <li><a href="#/about">About</a></li>
-          <li ng-click="scrollToBottom()"><a target="_self" href="#">Contact</a></li>
-
-      </ul>
-
-  </section>
+<section ng-controller="layoutController">
+<nav class="site-menu js-menu">
+    <span class="site-menu__trigger js-trigger"></span>
+    <ul class="site-menu__nav">
+        <li class="site-menu__list"><a href="#/" class="site-menu__link">Home</a></li>
+        <li class="site-menu__list"><a href="#/events" class="site-menu__link">Events</a></li>
+        <li class="site-menu__list"><a href="#/events/hc" class="site-menu__link">Homecoming 2015</a></li>
+        <li class="site-menu__list"><a href="#/about" class="site-menu__link">About</a></li>
+        <li class="site-menu__list" ng-click="scrollToBottom()">
+            <a class="site-menu__link"target="_self" href="#">Contact</a>
+        </li>
+    </ul>
 </nav>
-</div>
-
+</section>
 <div class="parallax-background" ng-controller="homeController">
     <div class="intro-text">
         <div class="row">
@@ -119,9 +106,8 @@
 <script src="js/angular-scroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-animate.js"></script>
 <script src="js/foundation.min.js"></script>
-<script src="js/foundation/foundation.alert.js"></script>
-<script src="js/foundation/foundation.topbar.js"></script>
 <script src="js/modules/fab.js"></script>
+<script src="js/west.js"></script>
 
 <script>
 
@@ -140,7 +126,7 @@ $(function() {
 $(document).ready(function(){
 
     $('.footer').fadeIn();
-    $(document).foundation( );
+    $(document).foundation('');
 
 });
 
