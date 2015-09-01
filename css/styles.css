@@ -197,7 +197,7 @@ i {
 }
 
 li.active a {
-    background: #943543 !important;
+    background: #a01522 !important;
 
 }
 
@@ -266,8 +266,25 @@ h3 span {
     font-family: 'Open Sans Condensed', sans-serif; !important;
 }
 
-.top-15-perc{
-    top: 15% !important;
+.top-0-perc{
+    top: 0% !important;
+}
+
+.top-bar {
+    background-color: black !important;
+}
+
+ul.right *{
+    background-color: black !important;
+    border-radius: 10px;
+
+}
+
+
+@media only screen and (max-width: 660px) {
+    .hide-for-small-cust {
+        display:none !important;
+    }
 }
 
 

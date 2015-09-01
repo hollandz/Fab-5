@@ -14,32 +14,32 @@
     <script src="js/vendor/modernizr.js"></script>
 </head>
 <body ng-app="fab">
-<section ng-controller="layoutController">
-<div class="">
-<div class="contain-to-grid">
- <nav class="top-bar margin-left-0 max-width-0" data-topbar role="navigation">
-  <ul class="title-area">
-    <li class="name"> 
-      <h1><a class="js-trigger" href="#" target="_self"><i class="navIcon fi-arrow-right"></i></h1>
-    </li>
-     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><
-      <h1><a class="js-trigger" href="#" target="_self"><i class="navIcon fi-arrow-right"></i></h1>
-    </li>
-  </ul>
+    <section ng-controller="layoutController">
+        <div>
+            <div class="contain-to-grid">
+               <nav class="top-bar margin-left-0 max-width-0" data-topbar role="navigation">
+                  <ul class="title-area">
+                    <li class="name"> 
+                      <h1><a class="js-trigger" href="#" target="_self"><i class="navIcon fi-arrow-right"></i></h1>
+                  </li>
+                  <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                  <li class="toggle-topbar menu-icon"><
+                      <h1><a class="js-trigger" href="#" target="_self"><i class="navIcon fi-arrow-right"></i></h1>
+                  </li>
+              </ul>
 
-  <section class="top-bar-section">
-    <!-- Right Nav Section -->
-    <ul class="right">
-      <li class="active home"><a href="#/">Home</a></li>
-      <li class="hc"><a href="#/events/hc">Homecoming</a></li>
-      <li class="hotel"><a href="#/hotel">Hotel</a></li>
-      <li class="about"><a href="#/about">About</a></li>
-      <li class="" ng-click=scrollToBottom()><a href="#">Contact</a></li>
-    </ul>
-  </section>
-</nav>
-</div>
+              <section class="top-bar-section hide-for-small-cust">
+                <!-- Right Nav Section -->
+                <ul class="right">
+                  <li class="active home"><a href="#/">Home</a></li>
+                  <li class="hc"><a href="#/events/hc">Homecoming</a></li>
+                  <li class="hotel"><a href="#/hotel">Hotel</a></li>
+                  <li class="about"><a href="#/about">About</a></li>
+                  <li class="" ng-click=scrollToBottom()><a target="_self" href="#">Contact</a></li>
+              </ul>
+          </div>
+      </nav>
+  </div>
 </div>
 
 <nav class="site-menu js-menu">
@@ -49,27 +49,27 @@
         <li class="site-menu__list"><a href="#/hotel" class="site-menu__link hotel">Hotel</a></li>
         <li class="site-menu__list"><a href="#/about" class="site-menu__link about">About</a></li>
         <li class="site-menu__list" ng-click="scrollToBottom()">
-            <a class="site-menu__link"target="_self" href="#">Contact</a>
+            <a class="site-menu__link contact" target="_self" href="#">Contact</a>
         </li>
     </ul>
 </nav>
 </section>
-<div class="parallax-background" ng-controller="homeController">
+<div class="parallax-background row" ng-controller="homeController">
     <div class="intro-text">
-            <div class="animated ">
-                <img id="backLogo" ng-src="{{bgURL}}" fade-in>
-            </div>
-    </div>
-</div>
-
-<div class="parallax-content">
-            <div ng-view autoscroll="true" class="animated fadeIn">
-            </div>
+        <div class="animated ">
+            <img id="backLogo" ng-src="{{bgURL}}" fade-in>
         </div>
     </div>
 </div>
 
-<footer class="footer opacity-085 top-15-perc" id="contact" style="display:none;">
+<div class="parallax-content">
+    <div ng-view autoscroll="true" class="animated fadeIn">
+    </div>
+</div>
+</div>
+</div>
+
+<footer class="footer opacity-085 top-0-perc" id="contact" style="display:none;">
 
     <div class="row">
         <div class="columns small-6 small-centered end">
@@ -77,7 +77,7 @@
         </div>
     </div>
     <div class="row collapse">
-        
+
         <div class="small-6 small-centered columns end" ng-controller="ContactController">
             <hr />
 

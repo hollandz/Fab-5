@@ -8,6 +8,7 @@ var home        = 'li.home';
 var hc          = 'li.hc';
 var hotel       = 'li.hotel';
 var about       = 'li.about';
+var about       = 'li.contact';
 
 // Functions
 function slideWest() {
@@ -63,6 +64,10 @@ $(".site-menu__link.hotel").on('click', function(){
 
 $(".site-menu__link.about").on('click', function(){
     escWest(about);
+});
+
+$(".site-menu__link.contact").on('click', function(){
+    escWest(contact);
 });
 
 function activateLink(link){
