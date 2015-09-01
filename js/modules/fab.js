@@ -12,7 +12,6 @@ angular.module('fab')
         '<div>Date: ' + (new Date()).toString() + '</div>';
 
         $.ajax({
-
             url: 'https://api.sendgrid.com/api/mail.send.json',
             type: 'GET',
             timeout: 5000,
@@ -37,11 +36,7 @@ angular.module('fab')
                     $scope.$digest();
                 }
             }
-
-
         });
-
-
         }// end scope.send
     }]);//end conroller definition
 angular.module('fab').controller('layoutController', ['$scope', '$document', function($scope, $document){
@@ -71,14 +66,14 @@ angular.module('fab').directive('fadeIn', function($timeout){
 })
 
 angular.module('fab').controller('homeController', ['$scope', '$rootScope', function($scope, $rootScope){
-    $rootScope.bgURL = 'img/fab5logo.png';
+    //$rootScope.bgURL = 'img/fab5logo.png';
+    $rootScope.bgURL = 'http://fab5.blob.core.windows.net/images/Standing%20Ovation/55.jpg';
 }]);
 
 angular.module('fab').controller('hcController', ['$scope', '$rootScope',  function($scope, $rootScope){
-    $rootScope.bgURL = 'img/hcLogoAlt.png';
-
+    //$rootScope.bgURL = 'img/hcLogoAlt.png';
+    $rootScope.bgURL = 'http://fab5.blob.core.windows.net/images/Standing%20Ovation/55.jpg';
 }]);
-
 
 angular.module('fab').config(['$routeProvider', '$locationProvider',
 
@@ -100,9 +95,13 @@ angular.module('fab').config(['$routeProvider', '$locationProvider',
             templateUrl: 'Views/partials/_about.html',
             controller: 'homeController'
         }).
+        when('/hotel', {
+            templateUrl: 'Views/partials/_hotel.html',
+            controller: 'homeController'
+        }).
         otherwise({
             redirectTo: '/home'
         });
 
-
     }])
+

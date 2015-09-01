@@ -3,6 +3,7 @@
 <head>
     <title>Fab 5</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/fab5logo.png" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/west.css" />
     <link rel="stylesheet" href="css/foundation.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
@@ -13,15 +14,40 @@
     <script src="js/vendor/modernizr.js"></script>
 </head>
 <body ng-app="fab">
-
 <section ng-controller="layoutController">
+<div class="">
+<div class="contain-to-grid">
+ <nav class="top-bar margin-left-0 max-width-0" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name"> 
+      <h1><a class="js-trigger" href="#" target="_self"><i class="navIcon fi-arrow-right"></i></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><
+      <h1><a class="js-trigger" href="#" target="_self"><i class="navIcon fi-arrow-right"></i></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active home"><a href="#/">Home</a></li>
+      <li class="hc"><a href="#/events/hc">Homecoming</a></li>
+      <li class="hotel"><a href="#/hotel">Hotel</a></li>
+      <li class="about"><a href="#/about">About</a></li>
+      <li class="" ng-click=scrollToBottom()><a href="#">Contact</a></li>
+    </ul>
+  </section>
+</nav>
+</div>
+</div>
+
 <nav class="site-menu js-menu">
-    <span class="site-menu__trigger js-trigger"></span>
     <ul class="site-menu__nav">
-        <li class="site-menu__list"><a href="#/" class="site-menu__link">Home</a></li>
-        <li class="site-menu__list"><a href="#/events" class="site-menu__link">Events</a></li>
-        <li class="site-menu__list"><a href="#/events/hc" class="site-menu__link">Homecoming 2015</a></li>
-        <li class="site-menu__list"><a href="#/about" class="site-menu__link">About</a></li>
+        <li class="site-menu__list"><a href="#/" class="site-menu__link home">Home</a></li>
+        <li class="site-menu__list"><a href="#/events/hc" class="site-menu__link hc">Homecoming</a></li>
+        <li class="site-menu__list"><a href="#/hotel" class="site-menu__link hotel">Hotel</a></li>
+        <li class="site-menu__list"><a href="#/about" class="site-menu__link about">About</a></li>
         <li class="site-menu__list" ng-click="scrollToBottom()">
             <a class="site-menu__link"target="_self" href="#">Contact</a>
         </li>
@@ -30,11 +56,9 @@
 </section>
 <div class="parallax-background" ng-controller="homeController">
     <div class="intro-text">
-        <div class="row">
-            <div class="small-12 columns animated ">
+            <div class="animated ">
                 <img id="backLogo" ng-src="{{bgURL}}" fade-in>
             </div>
-        </div>
     </div>
 </div>
 
@@ -45,12 +69,16 @@
     </div>
 </div>
 
+<footer class="footer opacity-085 top-15-perc" id="contact" style="display:none;">
 
-<footer class="footer" id="contact" style="display:none;">
-
+    <div class="row">
+        <div class="columns small-6 small-centered end">
+            <h2 class="white-font font-open-sans-condensed">Contact Us</h2>
+        </div>
+    </div>
     <div class="row collapse">
-        <div class="small-6 small-centered columns" ng-controller="ContactController">
-
+        
+        <div class="small-6 small-centered columns end" ng-controller="ContactController">
             <hr />
 
             <div data-alert class="alert-box success radius" ng-show="success">
@@ -98,7 +126,6 @@
     </div>
     <p class="copywrite">Copywrite © 2015 ZH</p>
 </footer>
-
 <script src="js/blueimp-gallery.min.js"></script>
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
@@ -108,26 +135,13 @@
 <script src="js/foundation.min.js"></script>
 <script src="js/modules/fab.js"></script>
 <script src="js/west.js"></script>
-
 <script>
 
-//document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-
-$(function() {
- $("li").click(function() {
-      // remove classes from all
-      $("li").removeClass("active");
-      // add class to the one we clicked
-      $(this).addClass("active");
-  });
-});
-
+document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 
 $(document).ready(function(){
-
     $('.footer').fadeIn();
-    $(document).foundation('');
-
+    $(document).foundation('reflow', 'topbar');
 });
 
 </script>
