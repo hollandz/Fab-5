@@ -8,7 +8,6 @@ var home        = 'li.home';
 var hc          = 'li.hc';
 var hotel       = 'li.hotel';
 var about       = 'li.about';
-var about       = 'li.contact';
 
 // Functions
 function slideWest() {
@@ -41,7 +40,7 @@ $(document).keydown(function(e) {
     }
 });
 
-$(".top-bar-section li").on('click', function(){
+$(".top-bar-section li:not(.contact)").on('click', function(){
       // remove classes from all
       $("li").removeClass("active");
       // add class to the one we clicked
@@ -67,7 +66,7 @@ $(".site-menu__link.about").on('click', function(){
 });
 
 $(".site-menu__link.contact").on('click', function(){
-    escWest(contact);
+    escWest();
 });
 
 function activateLink(link){
