@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans Condensed', sans-serif; !important;
+    font-family: 'Open Sans Condensed', sans-serif !important;
     font-weight: 200;
     font-size: 20px;
     background-color: black;
@@ -7,7 +7,7 @@ body {
 
 .top-bar-section ul li>a, h3, #footerTitle {
 
-    font-family: 'Open Sans Condensed', sans-serif; !important;
+    font-family: 'Open Sans Condensed', sans-serif !important;
     
 }
 
@@ -26,6 +26,7 @@ body {
     background-size: cover;
     position: fixed;
     width: 100% !important;
+    z-index: -1;
 }
 
 .intro-text {
@@ -263,7 +264,7 @@ h3 span {
 }
 
 .font-open-sans-condensed{
-    font-family: 'Open Sans Condensed', sans-serif; !important;
+    font-family: 'Open Sans Condensed', sans-serif !important;
 }
 
 .top-0-perc{
