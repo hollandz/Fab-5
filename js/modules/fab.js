@@ -67,12 +67,12 @@ angular.module('fab').directive('fadeIn', function($timeout){
 
 angular.module('fab').controller('homeController', ['$scope', '$rootScope', function($scope, $rootScope){
     //$rootScope.bgURL = 'img/fab5logo.png';
-    $rootScope.bgURL = 'http://fab5.blob.core.windows.net/images/Standing%20Ovation/55.jpg';
+    $rootScope.bgURL = 'http://www.visitcolumbiamo.com/wp-content/uploads/2014/09/110609_MACSTskyline_081.jpg';
 }]);
 
 angular.module('fab').controller('hcController', ['$scope', '$rootScope',  function($scope, $rootScope){
     //$rootScope.bgURL = 'img/hcLogoAlt.png';
-    $rootScope.bgURL = 'http://fab5.blob.core.windows.net/images/Standing%20Ovation/55.jpg';
+    $rootScope.bgURL = 'http://www.visitcolumbiamo.com/wp-content/uploads/2014/09/110609_MACSTskyline_081.jpg';
 }]);
 
 angular.module('fab').config(['$routeProvider', '$locationProvider',

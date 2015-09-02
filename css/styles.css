@@ -1,4 +1,5 @@
 body {
+    text-transform: uppercase;
     font-family: 'Open Sans Condensed', sans-serif !important;
     font-weight: 200;
     font-size: 20px;
@@ -6,7 +7,7 @@ body {
 }
 
 .top-bar-section ul li>a, h3, #footerTitle{
-
+    text-transform: uppercase;
     font-family: 'Open Sans Condensed', sans-serif !important;
     
 }
@@ -51,6 +52,7 @@ body {
 }
 
 #titleText {
+    text-transform: uppercase;
     margin-top: 15%;
     font-family: 'Times New Roman', Times, serif;
     color: #a01522;
@@ -197,9 +199,8 @@ i {
     border-radius: 3px;
 }
 
-li.active a {
+li.active a{
     background: #a01522 !important;
-
 }
 
 .margin-top-100{
@@ -213,7 +214,7 @@ li.active a {
 .round-img {
     opacity: 0.9;
     height:18rem;
-    width: 18rem;
+    width: 100%;
     border-radius: 50%;
 }
 
@@ -264,6 +265,7 @@ h3 span {
 }
 
 .font-open-sans-condensed{
+    text-transform: uppercase;
     font-family: 'Open Sans Condensed', sans-serif !important;
 }
 
@@ -271,13 +273,17 @@ h3 span {
     top: 0% !important;
 }
 
-.top-bar, .top-bar .sticky{
-    margin-bottom: 5% !important;
-}
-
 .top-bar, .top-bar *{
     background-color: black !important;
     font-size: 110% !important;
+}
+
+.top-bar *{
+    padding-top: 0.75%;
+}
+
+.top-bar{
+    height: 4em !important;
 }
 
 ul.right *{
@@ -286,23 +292,23 @@ ul.right *{
 
 }
 
-ul.right{
-    margin-top: 2%;
+.navIcon{
+    font-size: 1.8em !important;
 }
 
-
-@media only screen and (max-width: 370px) {
-    .show-for-small-cust {
+@media only screen and (min-width: 370px) {
+    .hide-for-small-cust {
         display: none !important;
     }
 }
+    
 
-.navIcon{
-    font-size: 250% !important;
+ .round-link {
+    border-radius: 25px;
+    border: 2px solid white;
+    background: #a01522 !important;
+ }
+
+#blueimp-gallery-carousel{
+    background-color: black !important;
 }
-
-.contain-to-grid{
-    background-color: transparent;
-}
-
-
