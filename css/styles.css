@@ -48,7 +48,7 @@ body {
 
 #backLogo {
     /*height: 600px;*/
-    max-width: 2000px;
+    width: 100%;
 }
 
 #titleText {
@@ -232,7 +232,7 @@ h3 {
 }
 
 h3 span { 
-   font-size: 50px;
+   font-size: 150%;
    color: white !important;
    /*font: bold 24px/45px Helvetica, Sans-Serif; */
    letter-spacing: -1px;  
@@ -296,9 +296,9 @@ ul.right *{
     font-size: 1.8em !important;
 }
 
-@media only screen and (min-width: 370px) {
-    .hide-for-small-cust {
-        display: none !important;
+@media only screen and (min-device-width: 0px) and (max-device-width: 375px){
+    ul.hide-for-small-cust {
+        display: none; !important;
     }
 }
     
