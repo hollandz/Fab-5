@@ -28,42 +28,42 @@
                   </li>
               </ul>
 
-              <section class="top-bar-section">
-                <!-- Right Nav Section -->
-                <ul class="right hide-for-small-cust">
-                  <li class="active home"><a href="#/">Home</a></li>
-                  <li class="hc"><a href="#/events/hc">Homecoming</a></li>
-                  <li class="hotel"><a href="#/hotel">Hotel</a></li>
-                  <!-- <li class="gallery"><a href="#/gallery">Gallery</a></li> -->
-                  <li class="about"><a href="#/about">About</a></li>
-                  <li class="contact" ng-click=scrollToBottom()><a target="_self" href="#">Contact</a></li>
-              </ul>
-          </div>
+          <section class="top-bar-section">
+            <!-- Rig ht Nav Section -->
+            <ul class="right hide-for-small-cust">
+              <li class="active home"><a href="#/">Home</a></li>
+              <li class="hc"><a href="#/events/hc">Homecoming</a></li>
+              <li class="hotel"><a href="#/hotel">Hotel</a></li>
+              <!-- <li class="gallery"><a href="#/gallery">Gallery</a></li> -->
+              <li class="about"><a href="#/about">About</a></li>
+              <li class="contact" ng-click=scrollToBottom()><a target="_self" href="#">Contact</a></li>
+          </ul>
+      </section>
       </nav>
   </div>
 </div>
 
 <div class="row">
-<nav class="site-menu js-menu">
-    <ul class="site-menu__nav">
-        <li class="site-menu__list"><a href="#/" class="site-menu__link home">Home</a></li>
-        <li class="site-menu__list"><a href="#/events/hc" class="site-menu__link hc">Homecoming</a></li>
-        <li class="site-menu__list"><a href="#/hotel" class="site-menu__link hotel">Hotel</a></li>
-        <!-- <li class="site-menu__list"><a href="#/gallery" class="site-menu__link hotel">Gallery</a></li> -->
-        <li class="site-menu__list"><a href="#/about" class="site-menu__link about">About</a></li>
-        <li class="site-menu__list" ng-click="scrollToBottom()">
-            <a class="site-menu__link contact" target="_self" href="#">Contact</a>
-        </li>
-    </ul>
-</nav>
+    <nav class="site-menu js-menu">
+        <ul class="site-menu__nav">
+            <li class="site-menu__list"><a href="#/" class="site-menu__link home">Home</a></li>
+            <li class="site-menu__list"><a href="#/events/hc" class="site-menu__link hc">Homecoming</a></li>
+            <li class="site-menu__list"><a href="#/hotel" class="site-menu__link hotel">Hotel</a></li>
+            <!-- <li class="site-menu__list"><a href="#/gallery" class="site-menu__link hotel">Gallery</a></li> -->
+            <li class="site-menu__list"><a href="#/about" class="site-menu__link about">About</a></li>
+            <li class="site-menu__list" ng-click="scrollToBottom()">
+                <a class="site-menu__link contact" target="_self" href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
 </div>
 
 </section>
 <div class="parallax-background intro-text animated" ng-controller="homeController">
-            <img id="backLogo" ng-src="{{bgURL}}" fade-in>
+    <img id="backLogo" ng-src="{{bgURL}}" fade-in>
 </div>
 
-<div class="parallax-content">
+<div class="parallax-content" style="display: none;">
     <div ng-view autoscroll="true" class="animated fadeIn">
     </div>
 </div>
@@ -111,15 +111,15 @@
     </div>
     <div class="row collapse">
         <div class="small-12 columns">
-                <a target="_blank" href="//twitter.com/fab5gbe" class="icon-button twitter">
-                    <i class="fi-social-twitter"></i><span></span>
-                </a>
-                <a target="_blank" href="//www.facebook.com/pages/Fab5/848160428599252" class="icon-button facebook">
-                    <i class="fi-social-facebook"></i><span></span>
-                </a>
-                <a target="_blank" href="//instagram.com/fab5gbe/" class="icon-button gplus">
-                    <i class="fi-social-instagram"></i><span></span>
-                </a>
+            <a target="_blank" href="//twitter.com/fab5gbe" class="icon-button twitter">
+                <i class="fi-social-twitter"></i><span></span>
+            </a>
+            <a target="_blank" href="//www.facebook.com/pages/Fab5/848160428599252" class="icon-button facebook">
+                <i class="fi-social-facebook"></i><span></span>
+            </a>
+            <a target="_blank" href="//instagram.com/fab5gbe/" class="icon-button gplus">
+                <i class="fi-social-instagram"></i><span></span>
+            </a>
         </div>
     </div>
     <p class="copywrite">Copywrite 2015 <a href="https://www.linkedin.com/in/zaeholland">ZH</a></p>
@@ -134,15 +134,13 @@
 <script src="js/modules/fab.js"></script>
 <script src="js/west.js"></script>
 <script>
-
 //document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-
-$(document).ready(function(){
+$(window).on('load', function() {
+   $(".parallax-content").show();
     $('.footer').fadeIn();
     $(document).foundation('reflow', 'topbar');
 });
-
 </script>
-
+</div><!-- end cover -->
 </body>
 </html>
