@@ -5,7 +5,7 @@ body {
     background-color: black;
 }
 
-.top-bar-section ul li>a, h3, #footerTitle {
+.top-bar-section ul li>a, h3, #footerTitle{
 
     font-family: 'Open Sans Condensed', sans-serif !important;
     
@@ -271,8 +271,13 @@ h3 span {
     top: 0% !important;
 }
 
-.top-bar {
+.top-bar, .top-bar .sticky{
+    margin-bottom: 5% !important;
+}
+
+.top-bar, .top-bar *{
     background-color: black !important;
+    font-size: 110% !important;
 }
 
 ul.right *{
@@ -281,11 +286,23 @@ ul.right *{
 
 }
 
+ul.right{
+    margin-top: 2%;
+}
 
-@media only screen and (max-width: 660px) {
-    .hide-for-small-cust {
-        display:none !important;
+
+@media only screen and (max-width: 370px) {
+    .show-for-small-cust {
+        display: none !important;
     }
+}
+
+.navIcon{
+    zoom: 3;
+}
+
+.contain-to-grid{
+    background-color: transparent;
 }
 
 

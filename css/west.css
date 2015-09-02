@@ -74,6 +74,7 @@
     background: #FFF;
 }
 .site-menu__list {
+    font-size: 160%;
     list-style: none;
     padding: 5px 25px;
 }
@@ -95,8 +96,12 @@
 }
 
 .body--fly {
-    
 	max-width:  75%;
-    
+}
+
+
+.body--fly div.fixed{
+    max-width: 75% !important;
+    margin-left: 25% !important;
 }
  
