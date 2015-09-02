@@ -298,7 +298,7 @@ ul.right{
 }
 
 .navIcon{
-    font-size: 250%;
+    font-size: 250% !important;
 }
 
 .contain-to-grid{
