@@ -1,97 +1,112 @@
 <script>
-      $("li").removeClass("active");
-      // add class to the one we clicked
-      $(hotel).addClass("active");
+    $("li").removeClass("active");
+    // add class to the one we clicked
+    $(hotel).addClass("active");
 </script>
-
 <div class="row">
     <section class="hero">
-        <div class="small-12 large-7 columns">
-          <h1 class="font-open-sans-condensed">Hotel</h1>
-            <h1 style="color: #008CBA !important" class="font-open-sans-condensed">Book now!</h1>
-          <p>Need accommodations for Homecoming 2015? <a href="https://twitter.com/fab5gbe">@Fab5GBE</a> has partnered with Courtyard Marriott Downtown at USC to provide the Official Hotel for your Homecoming activities. Rooms available include 1 King Size or 2 Queen Size rooms at a special discounted rate of $199/night Oct 15 - Oct 18. </p>
-
-          <p>
-            Your stay includes:
-            <ul class="white-font">
-              <li>Complimentary wifi and parking</li>
-              <li>Breakfast Buffet for 2 people per day</li>
-              <li>4 pm Check-In and 11 am Check-Out</li>
-            </ul>
-          </p>
-
-          <p>Reservations must be placed before Septemper 15th to be eligible for the discounted rate.</p>
-          <p>Call 1-800-359-8140 using the Promo Code "Fab 5 Young Professionals" or go
-              <a href="http://tinyurl.com/MarriottFab5GBE">here</a>
-            </p>
-          </p>
-          <a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Fab%205%20Professionals%5ECAECD%60FACFACA%7CFACFACB%60199.00%60USD%60false%604%6010/15/15%6010/18/15%609/24/15&app=resvlink&stop_mobi=yes">
-            <h1 style="color: #008CBA !important" class="font-open-sans-condensed">Book now!</h1>
-          </a>
+        <div class="intro">
+            <div class="small-12 large-7 columns">
+                <h1 class="font-open-sans-condensed">Hotel</h1>
+                <h1 style="color: #008CBA !important" class="font-open-sans-condensed">Book now!</h1>
+                <p>Need accommodations for Homecoming 2015? <a href="https://twitter.com/fab5gbe">@Fab5GBE</a> has partnered with Courtyard Marriott Downtown at USC to provide the Official Hotel for your Homecoming activities. Rooms available include 1 King Size or 2 Queen Size rooms at a special discounted rate of $199/night Oct 15 - Oct 18. </p>
+                <p>
+                    Your stay includes:
+                    <ul class="white-font">
+                        <li>Complimentary wifi and parking</li>
+                        <li>Breakfast Buffet for 2 people per day</li>
+                        <li>4 pm Check-In and 11 am Check-Out</li>
+                    </ul>
+                </p>
+                <p>Reservations must be placed before Septemper 15th to be eligible for the discounted rate.</p>
+                <p>
+                    Call 1-800-359-8140 using the Promo Code "Fab 5 Young Professionals" or go
+                    <a href="http://tinyurl.com/MarriottFab5GBE">here</a>
+                </p>
+                </p>
+                <a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Fab%205%20Professionals%5ECAECD%60FACFACA%7CFACFACB%60199.00%60USD%60false%604%6010/15/15%6010/18/15%609/24/15&app=resvlink&stop_mobi=yes">
+                    <h1 style="color: #008CBA !important" class="font-open-sans-condensed">Book now!</h1>
+                </a>
+            </div>
+            <div class=" medium-uncentered small-12 large-5 columns medium-offset-2 large-offset-0 columns">
+                <div class="tech-img"></div>
+            </div>
         </div>
-
-        <div class=" medium-uncentered small-12 large-5 columns medium-offset-2 large-offset-0 columns">
-          <div class="tech-img"></div>
-        </div>
-
     </section>
 </div>
-
 <style type="text/css">
+    .hero {
+        /*background: url("img/dishTowelWallpaper.jp") no-repeat center center;*/
+        background-size: cover;
+        height: 1000px;
+    }
 
-.hero {
-  /*background: url("img/dishTowelWallpaper.jp") no-repeat center center;*/
-  background-size: cover;
-  height: 1000px; }
-  .hero:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom right, gray, black);
-    opacity: .8; }
-    .hero .intro {
-      /*top: 50%;*/
-      padding: 3rem;
-      position: relative;
-      /*transform: translateY(-50%);*/ }
-      .hero h1 {
-        color: #fff;
-        font-size: 1.5rem; 
-        line-height: 1.5em;
-        letter-spacing: -0.025em;
-        font-weight: 300;
-        text-align: center; }
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(to bottom right, gray, black);
+            opacity: .8;
+        }
+
+        .hero .intro {
+            /*top: 50%;*/
+            padding: 3rem;
+            position: relative;
+            /*transform: translateY(-50%);*/
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: 1.5rem;
+            line-height: 1.5em;
+            letter-spacing: -0.025em;
+            font-weight: 300;
+            text-align: center;
+        }
+
         .hero p, ul li {
-          font-size: 1em;
-          font-weight: bold;
-          color: #fff;
-          line-height: 1.75em;
-          font-weight: 200;
-          text-align: center;
-          margin-bottom: 2rem; }
-          .hero .tech-img {
+            font-size: 1em;
+            font-weight: bold;
+            color: #fff;
+            line-height: 1.75em;
+            font-weight: 200;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero .tech-img {
             background: url("img/hcLogoAlt.png") no-repeat center center;
             background-size: cover;
             height: 9rem;
             width: 9rem;
             border-radius: 50%;
             display: block;
-            margin: 0 auto; }
-            @media only screen and (min-width: 40.063em) {
-              .hero .tech-img {
-                height: 36rem;
-                width: 36rem; 
-                margin-left: 18px;}
-                .hero h1 {
-                  /*padding-top: 4.5rem;*/
-                  /*text-align: right;*/
-                  font-size: 2.5rem; }
-                  .hero p {
-                    /*text-align: right; */}
-li {
-  list-style: none !important;
-}
-                    </style>
+            margin: 0 auto;
+        }
+
+    @media only screen and (min-width: 40.063em) {
+        .hero .tech-img {
+            height: 36rem;
+            width: 36rem;
+            margin-left: 18px;
+        }
+
+        .hero h1 {
+            /*padding-top: 4.5rem;*/
+            /*text-align: right;*/
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            /*text-align: right; */
+        }
+
+        li {
+            list-style: none !important;
+        }
+    }
+</style>

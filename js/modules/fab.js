@@ -1,6 +1,6 @@
 angular.module('fab', ['ngRoute', 'duScroll']);
 angular.module('fab')
-.controller('ContactController', ['$scope',function ($scope) {
+.controller('ContactController', ['$scope', function ($scope) {
     $scope.success = false;
     $scope.error = false;
 
@@ -37,47 +37,47 @@ angular.module('fab')
                 }
             }
         });
-        }// end scope.send
-    }]);//end conroller definition
-angular.module('fab').controller('layoutController', ['$scope', '$document', function($scope, $document){
+    }// end scope.send
+}]);//end conroller definition
+angular.module('fab').controller('layoutController', ['$scope', '$document', function ($scope, $document) {
 
-    $scope.scrollToBottom = function (){
-       var someElement = angular.element(document.getElementById('contact'));
-       $document.scrollToElementAnimated(someElement);
-   }
+    $scope.scrollToBottom = function () {
+        var someElement = angular.element(document.getElementById('contact'));
+        $document.scrollToElementAnimated(someElement);
+    }
 
 }]);
 
-angular.module('fab').directive('fadeIn', function($timeout){
+angular.module('fab').directive('fadeIn', function ($timeout) {
     return {
         restrict: 'A',
-        link: function($scope, $element, attrs){
+        link: function ($scope, $element, attrs) {
             //$element.addClass("animated fadeInDownBig");
-            $element.on('load', function() {
+            $element.on('load', function () {
 
                 $element.removeClass().addClass('animated fadeIn')
-                .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                   $element.removeClass();
-    });
+                .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                    $element.removeClass();
+                });
 
             });
         }
     }
 })
 
-angular.module('fab').controller('homeController', ['$scope', '$rootScope', function($scope, $rootScope){
+angular.module('fab').controller('homeController', ['$scope', '$rootScope', function ($scope, $rootScope) {
     //$rootScope.bgURL = 'img/fab5logo.png';
     $rootScope.bgURL = 'http://www.visitcolumbiamo.com/wp-content/uploads/2014/09/110609_MACSTskyline_081.jpg';
 }]);
 
-angular.module('fab').controller('hcController', ['$scope', '$rootScope',  function($scope, $rootScope){
+angular.module('fab').controller('hcController', ['$scope', '$rootScope', function ($scope, $rootScope) {
     //$rootScope.bgURL = 'img/hcLogoAlt.png';
     $rootScope.bgURL = 'http://www.visitcolumbiamo.com/wp-content/uploads/2014/09/110609_MACSTskyline_081.jpg';
 }]);
 
 angular.module('fab').config(['$routeProvider', '$locationProvider',
 
-    function($routeProvider, $locationProvider) {
+    function ($routeProvider, $locationProvider) {
 
         $routeProvider.
         when('/home', {
