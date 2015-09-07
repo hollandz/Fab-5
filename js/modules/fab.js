@@ -52,7 +52,6 @@ angular.module('fab').directive('fadeIn', function ($timeout) {
     return {
         restrict: 'A',
         link: function ($scope, $element, attrs) {
-            //$element.addClass("animated fadeInDownBig");
             $element.on('load', function () {
 
                 $element.removeClass().addClass('animated fadeIn')
@@ -80,22 +79,22 @@ angular.module('fab').config(['$routeProvider', '$locationProvider',
         $routeProvider.
         when('/home', {
             templateUrl: 'Views/partials/_home.html',
-            controller: 'homeController'
+            controller: 'homeController as home1'
         }).
         when('/events', {
             templateUrl: 'Views/partials/_events.html',
         }).
         when('/events/hc', {
             templateUrl: 'Views/partials/_hc.html',
-            controller: 'hcController'
+            controller: 'hcController as hc'
         }).
         when('/about', {
             templateUrl: 'Views/partials/_about.html',
-            controller: 'homeController'
+            controller: 'homeController as home2'
         }).
         when('/hotel', {
             templateUrl: 'Views/partials/_hotel.html',
-            controller: 'homeController'
+            controller: 'homeController as home3'
         }).
         otherwise({
             redirectTo: '/home'
