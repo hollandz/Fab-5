@@ -18,8 +18,8 @@ angular.module('fab')
             data: {
                 'api_user': 'azure_26671fad870f47d3458dc77dede74dd5@azure.com',
                 'api_key': '8Ia5zRY04Ow9re9',
-                'to': 'zaphane.holland@gmail.com',
-                'toname': 'Work email',
+                'to': 'fab5gbe@gmail.com',
+                'toname': 'Fab 5 GBE',
                 'subject': 'New Contact Form Submission',
                 'from': $scope.user.email,
                 'text': $scope.user.body
