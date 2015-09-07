@@ -12,8 +12,17 @@
     <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
     <link rel="stylesheet" href="content/foundation-icons/foundation-icons.css" />
     <link rel="stylesheet" href="css/animate.css" />
+
     <script src="js/vendor/modernizr.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
+    <script src="js/blueimp-gallery.min.js"></script>
+    <script src="js/angular-scroll.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/modules/fab.js"></script>
 </head>
+
 <body ng-app="fab">
 <nav class="top-bar" role="navigation">
   <ul class="title-area">
@@ -33,21 +42,6 @@
     </ul>
 </section>
 </nav>
-
-    <!-- <section ng-controller="layoutController">
-        <div>
-            <nav class="nav-collapse">
-                <ul>
-                    <li class="active home"><a href="#/">Home</a></li>
-                    <li class="hc"><a href="#/events/hc">Homecoming</a></li>
-                    <li class="hotel"><a href="#/hotel">Hotel</a></li>
-                    <li class="gallery"><a href="#/gallery">Gallery</a></li>
-                    <li class="about"><a href="#/about">About</a></li>
-                    <li class="contact" ng-click=scrollToBottom()><a target="_self" href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </section>  -->
 
     <div class="parallax-background intro-text animated" ng-controller="homeController">
         <img id="backLogo" ng-src="{{bgURL}}" fade-in>
@@ -110,13 +104,7 @@
         </div>
         <p class="copywrite">Copywrite 2015 <a href="https://www.linkedin.com/in/zaeholland">ZH</a></p>
     </footer>
-    <script src="js/blueimp-gallery.min.js"></script>
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
-    <script src="js/angular-scroll.min.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/modules/fab.js"></script>
+    
     <script>
         //document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
         $(window).on('load', function () {
@@ -131,7 +119,11 @@
         });
 
         $(".custom-nav li, .toggle-topbar").click(function(){
-            $(".custom-nav").toggleClass('hidden animated fadeInDown');
+
+            $(".custom-nav").toggleClass('animated fadeInDown')
+                .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $(".custom-nav").removeClass('animated fadeInDown');
+                });
         });
 
     </script>
