@@ -336,3 +336,7 @@ ul.right * {
 .menu-icon a {
     margin-top: 10% !important;
 }
+
+#contactForm{
+    color: black !important;
+}
