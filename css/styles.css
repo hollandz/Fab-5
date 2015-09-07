@@ -332,3 +332,7 @@ ul.right * {
     background: #000;
     z-index: 9999;
 }
+
+.menu-icon a {
+    margin-top: 10% !important;
+}
