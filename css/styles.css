@@ -6,6 +6,11 @@ body {
     background-color: black;
 }
 
+li.name{
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif !important;
+}
+
 .top-bar-section ul li > a, h3, #footerTitle {
     text-transform: uppercase;
     font-family: 'Open Sans Condensed', sans-serif !important;
@@ -272,16 +277,8 @@ h3 {
     font-size: 110% !important;
 }
 
-    .top-bar * {
-        padding-top: 0.75%;
-    }
-
-.top-bar {
-    height: 4em !important;
-}
-
 ul.right * {
-    background-color: black !important;
+    background-color: transparent !important;
     border-radius: 10px;
 }
 
@@ -289,7 +286,7 @@ ul.right * {
     font-size: 1.8em !important;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 1000px) {
+@media only screen and (min-width: 0px) and (max-width: 40.0625em) {
     .hide-for-small-cust {
         display: none !important;
     }
@@ -298,6 +295,20 @@ ul.right * {
         max-width: none;
         margin-left: -1000px !important;
         margin-top: -1000px;
+    }
+
+    ul.right.custom-nav{
+            position: fixed;
+            z-index: 1 !important;
+            margin-top: 45px;
+    }
+
+    ul.right.custom-nav.hidden{
+            display:none !important;
+    }
+
+    .toggle-topbar.menu-icon {
+        margin-top: 0px !important;
     }
 }
 
