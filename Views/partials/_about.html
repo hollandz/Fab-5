@@ -1,81 +1,87 @@
-<script>
-      $("li").removeClass("active");
-      // add class to the one we clicked
-      $(about).addClass("active");
-</script>
-
 <div class="row">
     <section class="hero">
-      <div class="row intro">
-        <div class="small-centered small-centered small-9 columns">
-          <h3 class="white-font">About Us</h3>
-            <p class="content">Five individuals came together representing each area code of South Carolina, top tier years of unparalleled collegiate thrill, & a post-graduate intuition that defines the prestige that our generation represents. Events were their niche - events that overstood opulence, decadence & replaced them with the fervent zeal to heighten the norm in all facades of life. Your life's events are your experiences, and your greatest experiences are our responsibility.</p>
+        <div class="intro">
+            <div class="small-centered small-9 columns">
+                <h3 class="white-font">About Us</h3>
+                <p class="content">Five individuals came together representing each area code of South Carolina, top tier years of unparalleled collegiate thrill, & a post-graduate intuition that defines the prestige that our generation represents. Events were their niche - events that overstood opulence, decadence & replaced them with the fervent zeal to heighten the norm in all facades of life. Your life's events are your experiences, and your greatest experiences are our responsibility.</p>
+            </div>
         </div>
-      </div>
     </section>
 </div>
-
 <style type="text/css">
-p{
-  font-size: 125%;
+    p {
+        font-size: 125%;
+    }
 
-}
-h3{
+    h3 {
+        position: initial;
+    }
 
-  position: initial;
-}
-.hero {
-  /*background: url("http://fab5.blob.core.windows.net/images/Standing%20Ovation/62.jpg") no-repeat center center;*/
-  background-size: cover;
-  height: 1000px; }
-  .hero:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom right, gray, black);
-    opacity: .8; }
-    .hero .intro {
-      padding: 3rem;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%); }
-      .hero h1 {
-        color: #fff;
-        font-size: 1.5rem;
-        line-height: 1.5em;
-        letter-spacing: -0.025em;
-        font-weight: 300;
-        text-align: center; }
+    .hero {
+        /*background: url("http://fab5.blob.core.windows.net/images/Standing%20Ovation/62.jpg") no-repeat center center;*/
+        background-size: cover;
+        height: 1000px;
+    }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(to bottom right, gray, black);
+            opacity: .8;
+        }
+
+        .hero .intro {
+            padding: 3rem;
+            position: relative;
+            top: 20%;
+            transform: translateY(-20%);
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: 1.5rem;
+            line-height: 1.5em;
+            letter-spacing: -0.025em;
+            font-weight: 300;
+            text-align: center;
+        }
+
         .hero p {
-          color: #fff;
-          line-height: 1.75em;
-          font-weight: 200;
-          text-align: center;
-          margin-bottom: 2rem; }
-          .hero .tech-img {
+            color: #fff;
+            line-height: 1.75em;
+            font-weight: 200;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero .tech-img {
             background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/South_Carolina_Gamecocks_Block_C_logo.svg/2000px-South_Carolina_Gamecocks_Block_C_logo.svg.png") no-repeat center center;
             background-size: cover;
             height: 9rem;
             width: 9rem;
             border-radius: 50%;
             display: block;
-            margin: 0 auto; }
-            @media only screen and (min-width: 40.063em) {
-              .hero .tech-img {
-                height: 18rem;
-                width: 18rem; }
-                .hero h1 {
-                  padding-top: 4.5rem;
-                  text-align: right;
-                  font-size: 2.5rem; }
-                  .hero p {
-                    text-align: center; } }
+            margin: 0 auto;
+        }
 
+    @media only screen and (min-width: 40.063em) {
+        .hero .tech-img {
+            height: 18rem;
+            width: 18rem;
+        }
 
+        .hero h1 {
+            padding-top: 4.5rem;
+            text-align: right;
+            font-size: 2.5rem;
+        }
 
-
-
-                    </style>
+        .hero p {
+            text-align: center;
+        }
+    }
+</style>
