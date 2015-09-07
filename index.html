@@ -69,7 +69,7 @@
                     There was a problem sending your email.
                     <a href="#" class="close">&times;</a>
                 </div>
-                <form role="form" name="contactForm">
+                <form role="form" name="contactForm" id="contactForm">
                     <div>
                         <input class="radius tiny" type="text" name="name" ng-model="user.name" required="required" placeholder="Your name">
                         <span class="error" ng-show="contactForm.name.$error.required && !contactForm.name.$pristine">Invalid Entry</span>
