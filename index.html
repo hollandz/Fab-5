@@ -46,14 +46,13 @@
     <div class="parallax-background intro-text animated" ng-controller="homeController">
         <img id="backLogo" ng-src="{{bgURL}}" fade-in>
     </div>
-    <div class="parallax-content" style="display: none;">
-        <div ng-view autoscroll="true" class="animated">
+    <div class="parallax-content" >
+        <div ng-view autoscroll="true" class="animated fadeInUp">
         </div>
     </div>
     </div>
-    </div>
 
-    <footer class="footer opacity-085 top-0-perc" id="contact" style="display:none;">
+    <footer class="footer opacity-085 top-0-perc" id="contact" style="visibility: hidden;">
         <div class="row">
             <div class="columns small-6 small-centered end">
                 <h2 class="white-font font-open-sans-condensed">Contact Us</h2>
@@ -110,7 +109,7 @@
         $(window).on('load', function () {
             $(document).foundation('reflow');
             $(".parallax-content").show();
-            $('.footer').fadeIn();
+            $('.footer').css('visibility', 'visible', function(){console.log("Displayed footer.")});
         });
 
         $('.top-bar li').click(function(){
@@ -119,7 +118,6 @@
         });
 
         $(".custom-nav li, .toggle-topbar").click(function(){
-
             $(".custom-nav").toggleClass('animated hidden fadeInDown')
                 .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
                 $(".custom-nav").removeClass('animated fadeInDown');
