@@ -345,3 +345,7 @@ ul.right * {
 #contactForm{
     color: black !important;
 }
+
+center-text{
+    text-align: center !important;
+}
