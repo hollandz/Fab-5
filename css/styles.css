@@ -310,6 +310,11 @@ ul.right * {
     .toggle-topbar.menu-icon {
         margin-top: 0px !important;
     }
+
+    div.intro {
+        font-size: 90% !important;
+        padding: 0 !important;
+    }
 }
 
 
