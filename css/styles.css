@@ -292,9 +292,9 @@ ul.right * {
     }
 
     #backLogo{
-        max-width: none;
-        margin-left: -1000px !important;
-        margin-top: -1000px;
+        max-width: 2000px;
+        margin-left: -500px !important;
+        margin-top: -500px;
     }
 
     ul.right.custom-nav{
