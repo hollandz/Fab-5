@@ -27,7 +27,7 @@ angular.module('fab')
             dataType: 'jsonp',
             error: function (x, t, m) {
                 debugger;
-                if (t === "timeout") {
+                if (t === "timeout" || t==="error") {
                     $scope.error = true;
                 } else if (t == "parsererror") {
                     $scope.success = true;
