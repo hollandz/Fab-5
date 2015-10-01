@@ -213,6 +213,10 @@ li.active a {
     margin-top: 300px;
 }
 
+.margin-top-20{
+    margin-top: 20px;
+}
+
 .round-img {
     opacity: 0.9;
     height: 18rem;
@@ -346,6 +350,6 @@ ul.right * {
     color: black !important;
 }
 
-center-text{
+.center-text{
     text-align: center !important;
 }
