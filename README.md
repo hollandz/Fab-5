@@ -25,6 +25,7 @@ export EMAIL_RECIPIENT="optional@blah"
 ```
 
 * Run: `npm start`
+* Go to: [localhost:3000](http://localhost:3000)
 
 ## Run on Azure
 
