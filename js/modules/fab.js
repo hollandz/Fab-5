@@ -6,37 +6,8 @@ angular.module('fab')
 
     $scope.send = function () {
 
-        var htmlBody = '<div>Name: ' + $scope.user.name + '</div>' +
-        '<div>Email: ' + $scope.user.email + '</div>' +
-        '<div>Message: ' + $scope.user.body + '</div>' +
-        '<div>Date: ' + (new Date()).toString() + '</div>';
-
-        $.ajax({
-            url: 'https://api.sendgrid.com/api/mail.send.json',
-            type: 'GET',
-            timeout: 5000,
-            data: {
-                'api_user': 'azure_26671fad870f47d3458dc77dede74dd5@azure.com',
-                'api_key': '8Ia5zRY04Ow9re9',
-                'to': 'fab5gbe@gmail.com',
-                'toname': 'Fab 5 GBE',
-                'subject': 'New Contact Form Submission',
-                'from': $scope.user.email,
-                'text': $scope.user.body
-            },
-            dataType: 'jsonp',
-            error: function (x, t, m) {
-                debugger;
-                if (t === "timeout" || t==="error") {
-                    $scope.error = true;
-                } else if (t == "parsererror") {
-                    $scope.success = true;
-                    $scope.user = {};
-                    $scope.contactForm.$setPristine();
-                    $scope.$digest();
-                }
-            }
-        });
+        $scope.error = true;
+        
     }// end scope.send
 }]);//end conroller definition
 angular.module('fab').controller('layoutController', ['$scope', '$document', function ($scope, $document) {
