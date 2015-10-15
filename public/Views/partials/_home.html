@@ -22,17 +22,16 @@
         </a>
     </div>
 </div>
-<div class="row margin-top-150">
-    <div class="columns small-12">
-        <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
-            <div class="slides"></div>
-            <h3 class="title"></h3>
-            <a class="prev">‹</a>
-            <a class="next">›</a>
-            <a class="play-pause"></a>
-            <ol class="indicator"></ol>
-        </div>
-    </div>
+
+<div class="row margin-top-100">
+<div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
 </div>
 
 <script type="text/javascript">
@@ -45,6 +44,7 @@
         for (var i = 1; i < 100; i++) {
             str = "" + i;
             ans = pad.substring(0, pad.length - str.length) + str;
+<<<<<<< HEAD:public/Views/partials/_home.html
             links.push("/img/StandingOvation/" + ans + ".jpg");
         }
 
@@ -52,8 +52,13 @@
         {
             container: '#blueimp-gallery-carousel',
             carousel: true
+=======
+            links.push("img/StandingOvation/" + ans + ".jpg");
+>>>>>>> master-live:Views/partials/_home.html
         }
-        );
+        
+        links = shuffle(links);
+        blueimp.Gallery(links,{container: '#blueimp-gallery-carousel', carousel: true});
 
         function shuffle(array) {
             var currentIndex = array.length, temporaryValue, randomIndex;

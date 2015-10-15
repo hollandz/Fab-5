@@ -34,9 +34,9 @@
     <!-- Right Nav Section -->
     <ul class="right custom-nav hidden">
         <li class="active home"><a href="#/">Home</a></li>
+        <li class="events"><a href="#/events">Events</a></li>
         <li class="hc"><a href="#/events/hc">Homecoming</a></li>
         <li class="hotel"><a href="#/hotel">Hotel</a></li>
-        <!-- <li class="gallery"><a href="#/gallery">Gallery</a></li> -->
         <li class="about"><a href="#/about">About</a></li>
         <li class="contact" ng-click=scrollToBottom()><a target="_self" href="#">Contact</a></li>
     </ul>
@@ -69,7 +69,7 @@
                     There was a problem sending your email.
                     <a href="#" class="close">&times;</a>
                 </div>
-                <form role="form" name="contactForm">
+                <form role="form" name="contactForm" id="contactForm">
                     <div>
                         <input class="radius tiny" type="text" name="name" ng-model="user.name" required="required" placeholder="Your name">
                         <span class="error" ng-show="contactForm.name.$error.required && !contactForm.name.$pristine">Invalid Entry</span>
@@ -101,7 +101,7 @@
                 </a>
             </div>
         </div>
-        <p class="copywrite">Copywrite 2015 <a href="https://www.linkedin.com/in/zaeholland">ZH</a></p>
+        <p class="copywrite">Copyright 2015 <a href="https://www.linkedin.com/in/zaeholland">ZH</a></p>
     </footer>
     
     <script>

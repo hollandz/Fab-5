@@ -213,6 +213,10 @@ li.active a {
     margin-top: 300px;
 }
 
+.margin-top-20{
+    margin-top: 20px;
+}
+
 .round-img {
     opacity: 0.9;
     height: 18rem;
@@ -292,9 +296,9 @@ ul.right * {
     }
 
     #backLogo{
-        max-width: none;
-        margin-left: -1000px !important;
-        margin-top: -1000px;
+        max-width: 2000px;
+        margin-left: -500px !important;
+        margin-top: -500px;
     }
 
     ul.right.custom-nav{
@@ -309,6 +313,11 @@ ul.right * {
 
     .toggle-topbar.menu-icon {
         margin-top: 0px !important;
+    }
+
+    div.intro {
+        font-size: 90% !important;
+        padding: 0 !important;
     }
 }
 
@@ -335,4 +344,12 @@ ul.right * {
 
 .menu-icon a {
     margin-top: 10% !important;
+}
+
+#contactForm{
+    color: black !important;
+}
+
+.center-text{
+    text-align: center !important;
 }

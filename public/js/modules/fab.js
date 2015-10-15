@@ -5,6 +5,7 @@ angular.module('fab')
     $scope.error = false;
 
     $scope.send = function () {
+<<<<<<< HEAD:public/js/modules/fab.js
       
       var reqPromise = $http.post('/email', {user: $scope.user});
       
@@ -23,6 +24,11 @@ angular.module('fab')
       
       
       
+=======
+
+        $scope.error = true;
+        
+>>>>>>> master-live:js/modules/fab.js
     }// end scope.send
 }]);//end conroller definition
 angular.module('fab').controller('layoutController', ['$scope', '$document', function ($scope, $document) {
