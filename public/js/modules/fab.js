@@ -1,11 +1,11 @@
 angular.module('fab', ['ngRoute', 'duScroll']);
 angular.module('fab')
 .controller('ContactController', ['$scope', '$http', function ($scope, $http) {
+    
     $scope.success = false;
     $scope.error = false;
 
     $scope.send = function () {
-<<<<<<< HEAD:public/js/modules/fab.js
       
       var reqPromise = $http.post('/email', {user: $scope.user});
       
@@ -22,13 +22,7 @@ angular.module('fab')
         $scope.error = true;
       });
       
-      
-      
-=======
-
-        $scope.error = true;
         
->>>>>>> master-live:js/modules/fab.js
     }// end scope.send
 }]);//end conroller definition
 angular.module('fab').controller('layoutController', ['$scope', '$document', function ($scope, $document) {
@@ -70,22 +64,22 @@ angular.module('fab').config(['$routeProvider', '$locationProvider',
 
         $routeProvider.
         when('/home', {
-            templateUrl: 'Views/partials/_home.html',
+            templateUrl: '/views/partials/_home.html',
             controller: 'homeController as home1'
         }).
         when('/events', {
-            templateUrl: 'Views/partials/_events.html',
+            templateUrl: 'views/partials/_events.html',
         }).
         when('/events/hc', {
-            templateUrl: 'Views/partials/_hc.html',
+            templateUrl: 'views/partials/_hc.html',
             controller: 'hcController as hc'
         }).
         when('/about', {
-            templateUrl: 'Views/partials/_about.html',
+            templateUrl: 'views/partials/_about.html',
             controller: 'homeController as home2'
         }).
         when('/hotel', {
-            templateUrl: 'Views/partials/_hotel.html',
+            templateUrl: 'views/partials/_hotel.html',
             controller: 'homeController as home3'
         }).
         otherwise({

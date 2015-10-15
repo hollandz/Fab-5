@@ -80,7 +80,7 @@
                     </div>
                     <div>
                         <textarea class="radius textarea-custom dark" rows="5" name="message" ng-model="user.body" required="required" placeholder="Your messsage"></textarea>
-                        <small class="error" ng-show="contactForm.message.$error.email && !contactForm.message.$pristine">Invalid entry</small>
+                        <small class="error" ng-show="contactForm.message.$error.required && !contactForm.message.$pristine">Invalid entry</small>
                     </div>
                     <div>
                         <button class="button button-wide" ng-click="send()" ng-disabled="contactForm.$invalid" ng-class="{disabled: contactForm.$invalid}">Send</button>
