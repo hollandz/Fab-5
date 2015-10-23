@@ -43,6 +43,11 @@ angular.module('fab').controller('hcController', ['$scope', '$rootScope', functi
     $rootScope.bgURL = 'img/skyline.jpg';
 }]);
 
+angular.module('fab').controller('galleryController', ['$scope', '$routeParams', function ($scope, $routeParams) {
+    $scope.event = $routeParams.event;
+    console.log($scope.event);
+}]);
+
 angular.module('fab').config(['$routeProvider', '$locationProvider',
 
     function ($routeProvider, $locationProvider) {
@@ -66,6 +71,14 @@ angular.module('fab').config(['$routeProvider', '$locationProvider',
         when('/hotel', {
             templateUrl: 'Views/partials/_hotel.html',
             controller: 'homeController as home3'
+        }).
+        when('/gallery', {
+            templateUrl: 'Views/partials/_gallery.html',
+        }).
+        when('/gallery/:event', {
+            templateUrl: 'Views/partials/_eventGallery.html',
+            controller: 'galleryController',
+            controllerAs: 'gc'
         }).
         otherwise({
             redirectTo: '/home'
