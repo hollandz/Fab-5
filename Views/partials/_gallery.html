@@ -1,48 +1,32 @@
-<h1 class="white-font">Standing Ovation</h1>
-<div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
-    <div class="slides"></div>
-    <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="play-pause"></a>
-    <ol class="indicator"></ol>
+
+<div class="row margin-top-150">
+    <div class="columns small-6 end">
+        <h1 class="white-font font-open-sans-condensed">2014</h1>
+    </div>
 </div>
-
-<script type="text/javascript">
-    $(window).on('load', function () {
-
-        var links = [];
-        var pad = '00';
-        var str = "";
-        var ans;
-        for (var i = 1; i < 100; i++) {
-            str = "" + i;
-            ans = pad.substring(0, pad.length - str.length) + str;
-            links.push("//fab5.blob.core.windows.net/images/Standing%20Ovation/" + ans + ".jpg");
-        }
-        
-        links = shuffle(links);
-        blueimp.Gallery(links,{container: '#blueimp-gallery-carousel', carousel: true});
-
-        function shuffle(array) {
-            var currentIndex = array.length, temporaryValue, randomIndex;
-
-            // While there remain elements to shuffle...
-            while (0 !== currentIndex) {
-
-                // Pick a remaining element...
-                randomIndex = Math.floor(Math.random() * currentIndex);
-                currentIndex -= 1;
-
-                // And swap it with the current element.
-                temporaryValue = array[currentIndex];
-                array[currentIndex] = array[randomIndex];
-                array[randomIndex] = temporaryValue;
-            }
-
-            return array;
-        }
-
-    });
-
-</script>
+<div class="row">
+    <div class="columns small-12 large-3 image">
+        <a href="#/gallery/socialnetwork">
+            <div class="round-img round-link"></div>
+            <h3><span>Social Network</span><br/><small><span>Oct 16th, 2015</span></small></h3>
+        </a>
+    </div>
+    <div class="columns small-12 large-3 image">
+        <a href="#/gallery/dayjavu">
+            <div class="round-img round-link"></div>
+            <h3><span>Day Javu</span><br/><small><span>Oct 17th, 2015</span></small></h3>
+        </a>
+    </div>
+    <div class="columns small-12 large-3 image">
+        <a href="#/gallery/guestlist">
+            <div class="round-img round-link"></div>
+            <h3><span>Guest List</span><br/><small><span>Oct 18th, 2015</span></small></h3>
+        </a>
+    </div>
+    <div class="columns small-12 large-3 image">
+        <a href="#/gallery/brunch">
+            <div class="round-img round-link"></div>
+            <h3><span>The Brunch Party</span><br/><small><span>Oct 19th, 2015</span></small></h3>
+        </a>
+    </div>
+</div>
