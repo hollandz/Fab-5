@@ -5,8 +5,22 @@ angular.module('fab')
     $scope.error = false;
 
     $scope.send = function () {
-
+      
+      var reqPromise = $http.post('/email', {user: $scope.user});
+      
+      reqPromise.success(function(data, status, headers, config) {
+        console.log(data);
+        $scope.success = true;
+        $scope.user = {};
+        $scope.contactForm.$setPristine();
+        $scope.$digest();
+      });
+      
+      reqPromise.error(function(data, status, headers, config) {
+        console.log(data);
         $scope.error = true;
+      });
+      
         
     }// end scope.send
 }]);//end conroller definition
