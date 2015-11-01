@@ -209,6 +209,10 @@ li.active a {
     margin-top: 100px;
 }
 
+.margin-bottom-100{
+    margin-bottom: 100px;
+}
+
 .margin-top-300 {
     margin-top: 300px;
 }
@@ -352,4 +356,57 @@ ul.right * {
 
 .center-text{
     text-align: center !important;
+}
+
+.gallery-link{
+    opacity: 0.9;
+    height: 11rem;
+    width: 100%;
+}
+
+.gallery-link-text{
+    position: inherit;;
+}
+
+.gallery-link.hc{
+    background: url("https://fab5images.blob.core.windows.net/gallery/galleryLinks/hc.jpg") no-repeat center;
+}
+
+.gallery-link.socialnetwork{
+    
+    background: url("https://fab5images.blob.core.windows.net/gallery/galleryLinks/socialnetwork.jpg") no-repeat center;
+}
+
+.gallery-link.dayjavu{
+    background: url("https://fab5images.blob.core.windows.net/gallery/galleryLinks/dayjavu.jpg") no-repeat center;
+}
+
+.gallery-link.guestlist{
+    background: url("https://fab5images.blob.core.windows.net/gallery/galleryLinks/guestlist.jpg") no-repeat center;
+
+}
+
+.gallery-link.brunch{
+    background: url("https://fab5images.blob.core.windows.net/gallery/galleryLinks/brunch.jpg") no-repeat center;
+
+}
+
+.gallery-link.standingovation{
+    background: url("https://fab5images.blob.core.windows.net/gallery/galleryLinks/standingovation.jpg") no-repeat center;
+
+}
+
+.gallery-link.socialnetwork{
+    background: url("https://fab5images.blob.core.windows.net/gallery/galleryLinks/socialnetwork.jpg") no-repeat center;
+
+}
+
+.blueimp-gallery>.slides {
+    max-height:1000px;
+}
+
+@media (max-width: 30em) {
+    .blueimp-gallery>.slides {
+    max-height:578px;
+}
 }

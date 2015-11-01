@@ -1,0 +1,51 @@
+<script>
+    $("li").removeClass("active");
+    // add class to the one we clicked
+    $(".gallery").addClass("active");
+</script>
+<div class="columns small-12 small-centered end text-center margin-top-20 ">
+ <div ng-switch="event">
+  <h2 ng-switch-when="brunch" class="white-font font-open-sans-condensed" ng-switch-when="Brunch">The Brunch Party, Oct 19th 2014</h2>
+  <h2 ng-switch-when="dayjavu" class="white-font font-open-sans-condensed" ng-switch-when="Brunch">Day Javu, Oct 17th 2014</h2>
+  <h2 ng-switch-when="hc2015" class="white-font font-open-sans-condensed" ng-switch-when="Brunch">Homecoming 2015, Oct 16th-18th 2014</h2>
+  <h2 ng-switch-when="standingovation" class="white-font font-open-sans-condensed" ng-switch-when="Brunch">Standing Ovation, May 8th-9th 2014</h2>
+  <h2 ng-switch-when="guestlist" class="white-font font-open-sans-condensed" ng-switch-when="Brunch">The Guest List, Oct 18th 2014</h2>
+  <h2 ng-switch-when="socialnetwork" class="white-font font-open-sans-condensed" ng-switch-when="Brunch">The Social Network, Oct 16th 2014</h2>
+ </div>
+</div>
+
+<div class="row">
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+        <div class="slides"></div>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+    </div>
+</div>
+
+<div class="row margin-top-100 margin-bottom-100">
+    <div class="columns small-12 text-center">
+    <!-- <div class="spinner">
+        <h2 class="white-font font-open-sans-condensed">Loading Images</h2><br/>
+        <img height="50" width="50" class="white-font" src="img/loading.gif">
+    </div> -->
+        <div id="links">
+            <a class="thumbs" ng-repeat="img in links" ng-href="https://fab5images.blob.core.windows.net/gallery/{{event}}/{{img}}.jpg">
+                <img ng-src="https://fab5images.blob.core.windows.net/gallery/Thumbs/{{event}}/{{img}}.jpg">
+            </a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event, fullScreen: true},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+</script>
+  
